@@ -1,0 +1,47 @@
+ .picture{
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100vw;
+}
+
+.centered-text {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    margin-left: 10rem;
+  }
+
+
+.typewriter > span {
+    display: inline-block;
+  }
+  
+  .typewriter > span {
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.15em solid white;
+    margin: 0;
+    padding: 0;
+  }
+  
+  @keyframes typewriter {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  .typewriter > span {
+    animation: typewriter 2s steps(30) forwards;
+  }
+  
