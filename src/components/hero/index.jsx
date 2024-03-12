@@ -22,6 +22,7 @@ function Hero() {
           <p>
             Dive into a world of cinematic wonders with our vast collection of movies, from Hollywood blockbuster to indie gems.
           </p>
+          <p>Starts at US$10.99. Cancel anytime.</p>
         </div>
       </div>
     </div>
