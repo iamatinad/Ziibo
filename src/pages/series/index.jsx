@@ -1,8 +1,10 @@
-import React from 'react'
-
+import Seriesc from "../../components/seriesc"
 function SeriesPage() {
   return (
-    <div>SeriesPage</div>
+    <div>
+      <Seriesc/>
+
+    </div>
   )
 }
 
