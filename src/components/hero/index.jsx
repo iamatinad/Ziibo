@@ -1,29 +1,37 @@
-import React from 'react';
-import Shogun from '../../assets/images/Shogun-2.jpg';
-import './index.css';
+import React from "react";
+import Shogun from "../../assets/images/Shogun-2.jpg";
+import Typewriter from "typewriter-effect";
+import "./index.css";
 
 function Hero() {
   return (
     <div>
       <img className="picture" src={Shogun} alt="Shogun" />
+      <div className="overlay" >
       <div className="centered-text">
-        <h1>
-          <span className="typewriter">Welcome</span>{' '}
-          <span className="typewriter">to</span>{' '}
-          <span className="typewriter">Ziibo</span>{' '}
-          <span className="typewriter">your</span>{' '}
-          <span className="typewriter">ultimate</span>{' '}
-          <span className="typewriter">destination</span>{' '}
-          <span className="typewriter">for</span>{' '}
-          <span className="typewriter">endless</span>{' '}
-          <span className="typewriter">entertainment.</span>
+        <h1 className="intro">
+          <Typewriter
+            onInit={(typewriter) => {
+              typewriter
+                .typeString("Welcome to Ziibo")
+                .pauseFor(2000)
+                .deleteAll()
+                .typeString("your ultimate destination")
+                .pauseFor(2000)
+                .deleteAll()
+                .typeString("for endless entertainment.")
+                .start();
+            }}
+          />
         </h1>
-        <div className="typewriter">
-          <p>
-            Dive into a world of cinematic wonders with our vast collection of movies, from Hollywood blockbuster to indie gems.
+        <div className="">
+          <p className="dive">
+            Dive into a world of cinematic wonders with our vast collection of
+            movies, from Hollywood blockbuster to indie gems.
           </p>
-          <p>Starts at US$10.99. Cancel anytime.</p>
+          <p className="underline">Starts at US$10.99 Cancel anytime.</p>
         </div>
+      </div>
       </div>
     </div>
   );

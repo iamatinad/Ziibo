@@ -16,32 +16,30 @@
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
-    margin-left: 10rem;
+  }
+
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
   }
 
 
-.typewriter > span {
-    display: inline-block;
+
+  .intro{
+    font-size: 4rem;
   }
-  
-  .typewriter > span {
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 0.15em solid white;
-    margin: 0;
-    padding: 0;
+
+  .dive{
+    font-weight: bold;
+    font-size: 20px;
   }
-  
-  @keyframes typewriter {
-    from {
-      width: 0;
-    }
-    to {
-      width: 100%;
-    }
+
+  .underline{
+   text-decoration: underline;
+   font-weight: bold;
   }
-  
-  .typewriter > span {
-    animation: typewriter 2s steps(30) forwards;
-  }
+
   
