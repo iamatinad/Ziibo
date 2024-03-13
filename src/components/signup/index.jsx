@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import Stack from "@mui/material/Stack";
+import Button from "@mui/material/Button";
 
-function SignUp() {
+export default function Signup() {
   return (
-    <div>SignUp compoent goes here</div>
-  )
+    <Stack direction="row" spacing={2}>
+      <Button variant="contained" color="success">
+        Sign In
+      </Button>
+    </Stack>
+  );
 }
-
-export default SignUp

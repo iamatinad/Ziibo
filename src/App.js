@@ -12,8 +12,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/Seriesc" element={<SeriesPage />}></Route>
-          <Route path="/Movies" element={<MoviesPage/>}></Route>
-          <Route path="/Topc" element={<TopImbdPage/>}></Route>
+          <Route path="/Movies" element={<MoviesPage />}></Route>
+          <Route path="/Topc" element={<TopImbdPage />}></Route>
         </Routes>
       </BrowserRouter>
     </div>

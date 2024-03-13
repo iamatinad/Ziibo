@@ -1,0 +1,31 @@
+/* #navbar {
+    background-color: rgba(0, 0, 0, 0.096);
+    padding: 10px 20px;
+} */
+
+/* .navbar_button_link{
+    font-weight: 700;
+    color: #d9e8ed;
+
+} */
+
+.nav_button_link{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    white-space: nowrap;
+    white-space-collapse: collapse;
+    text-wrap: nowrap;
+    font-size: 14px;
+    color: #999c9f;
+    justify-content: center;
+}
+
+
+.search{ 
+    z-index: 1;
+    flex-grow: 2;
+    height: 52px;
+    margin: 0;
+    margin-inline-end: 7px;
+}
