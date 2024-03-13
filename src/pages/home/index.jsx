@@ -1,8 +1,10 @@
 import React from 'react'
-
 function Home() {
   return (
-    <div>Home goes here</div>
+    <div>
+    Home
+
+    </div>
   )
 }
 
