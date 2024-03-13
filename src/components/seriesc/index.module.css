@@ -1,0 +1,26 @@
+
+    .grid{
+        padding: 10px;
+    }
+
+.card{
+    
+    border: 1px solid green; 
+    height: 400px;
+    width: 300px;
+
+}
+
+.img{
+    width: 300px;
+    height: 300px;
+
+}
+.body{
+    padding: 10px;
+}
+.container{
+   
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;  
+}

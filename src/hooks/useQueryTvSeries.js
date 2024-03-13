@@ -4,6 +4,7 @@ const useQueryTvSeries = () => {
     const [onTheAir, setOnTheAir] = useState([])
     const [airingToday, setAiringToday] = useState([])
     const  [topRated, setTopRated]= useState([])
+
    
     const onTheAirUrl = `https://api.themoviedb.org/3/tv/on_the_air?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`;
     const airingTodayUrl = `https://api.themoviedb.org/3/tv/airing_today?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`;
@@ -44,7 +45,7 @@ const fetchData = async () => {
      }
 
 try{
-  const res =await fetch(topRatedUrl,options)
+  const res =await fetch(topRatedUrl,options);
   const response=(await res.json()).results
   // console.log(response)
   setTopRated(response)
