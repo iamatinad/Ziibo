@@ -1,8 +1,10 @@
 import React from 'react'
+import Faqs from '../faqs'
 
 function Home() {
   return (
-    <div>Home goes here</div>
+    <Faqs/>
+    
   )
 }
 
