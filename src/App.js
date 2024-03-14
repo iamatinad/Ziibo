@@ -4,7 +4,7 @@ import Home from "./pages/home";
 import SeriesPage from "./pages/series";
 import MoviesPage from "./pages/moviespage";
 import TopImbdPage from "./pages/topimdb";
- 
+
 
 function App() {
   return (

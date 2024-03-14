@@ -1,5 +1,6 @@
 import React from 'react'
 import Faqs from '../faqs'
+
 import Checkout from '../checkout'
  
 
@@ -10,6 +11,12 @@ function Home() {
     <Checkout />
     </div>
    
+
+
+function Home() {
+  return (
+    <Faqs/>
+
     
   )
 }
