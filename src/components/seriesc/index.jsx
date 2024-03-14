@@ -1,94 +1,70 @@
-import useQueryTvSeries from '../../hooks/useQueryTvSeries';
-import styles from './index.module.css'
+ import useQueryTvSeries from '../../hooks/useQueryTvSeries';
+ import styles from "./index.module.css"
 
 function Seriesc() {
-  const { onTheAir, airingToday, topRated } = useQueryTvSeries()
+  const { popular, airingToday, topRated } = useQueryTvSeries()
 
 
   return (
-    <>
-      <h2>TvSeries</h2>
-<div>
-<h3>On The Air</h3>
-      <div className={styles.container}>
-        {
-          onTheAir.map((series) => (
-            <div className={styles.card}>
-              <div>
-                <div className={styles.content}>
-                  <img className={styles.img} src={`https://image.tmdb.org/t/p/w500${series.backdrop_path}`} />
-                </div>
-                <div className={styles.body}>
-                  {series.name}
-                </div>
-                <div>
-                  <button>PLAY</button>
-                </div>
-              </div>
-            </div>
+  <div className={styles.body}>
+  <h2 className={styles.headingg}>Tv Series</h2>
 
-          ))
+  <h3 className={styles.title}>Popular</h3>
+  <div className={styles.contain}>
+  {
+    popular.map((series) => (
+   
+    <div class={styles.card}>
+    <img className={styles.image} src={`https://image.tmdb.org/t/p/w500${series.backdrop_path}`} />
+    <div className={styles.container}>
+    <h4>{series.name}</h4>
+    <p><a className={styles.link}>play</a></p>
+    </div>
+    </div>
+  ))
+    }
+
+  </div>
+  
+    <h3 className={styles.title}>Airing Today</h3>
+    <div className={styles.contain}>
+    {
+      airingToday.map((series) => (
+     
+      <div class={styles.card}>
+      <img className={styles.image} src={`https://image.tmdb.org/t/p/w500${series.backdrop_path}`} />
+      <div className={styles.container}>
+      <h4>{series.name}</h4>
+      <p><a className={styles.link}>play</a></p>
+      </div>
+      </div>
+    ))
+      }
+
+    </div>
+    
+      <h3 className={styles.title}>Top Rated</h3>
+      <div className={styles.contain}>
+      {
+        topRated.map((series) => (
+       
+        <div class={styles.card}>
+        <img className={styles.image} src={`https://image.tmdb.org/t/p/w500${series.backdrop_path}`} />
+        <div className={styles.container}>
+        <h4>{series.name}</h4>
+        <p><a className={styles.link}>play</a></p>
+        </div>
+        </div>
+      ))
         }
+    
+
       </div>
      
-  
-</div>
-      <h3>Airing Today</h3>
-      
-      <div className={styles.container}>
-        {
-          airingToday.map((series) => (
-            <div className={styles.card}>
-              <div className={styles.content}>
-                <div>
-                  <img className={styles.img} src={`https://image.tmdb.org/t/p/w500${series.backdrop_path}`} />
-                </div>
-                <div className={styles.body}>
-                  {series.name}
-                </div>
-                <div>
-                  <button>PLAY</button>
-                </div>
-              </div>
-            </div>
+  </div>
+   
 
-          ))
-        }
+   )
+ }
 
-      </div>
-
-      <h3>Top Rated</h3>
-      <div className={styles.container}>
-        {
-          topRated.map((series) => (
-            <div className={styles.card}>
-              <div className={styles.content}>
-                <div>
-                  <img className={styles.img} src={`https://image.tmdb.org/t/p/w500${series.backdrop_path}`} />
-                </div>
-                <div className={styles.body}>
-                  {series.name}
-                </div>
-                <div>
-                  <button>PLAY</button>
-                </div>
-              </div>
-            </div>
-
-          ))
-        }
-      </div>
-
-
-
-
-
-
-
-
-
-    </>
-  )
-}
-
-export default Seriesc;
+ export default Seriesc;

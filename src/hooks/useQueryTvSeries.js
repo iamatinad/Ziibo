@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 
 const useQueryTvSeries = () => {
-    const [onTheAir, setOnTheAir] = useState([])
+    const [popular, setPopular] = useState([])
     const [airingToday, setAiringToday] = useState([])
     const  [topRated, setTopRated]= useState([])
 
    
-    const onTheAirUrl = `https://api.themoviedb.org/3/tv/on_the_air?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`;
+    const popularUrl = `https://api.themoviedb.org/3/tv/popular?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`;
     const airingTodayUrl = `https://api.themoviedb.org/3/tv/airing_today?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`;
     const topRatedUrl=`https://api.themoviedb.org/3/tv/top_rated?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`;
 const options = {
@@ -20,11 +20,11 @@ const options = {
 const fetchData = async () => {
     try {
 
-        const res =  await fetch(onTheAirUrl,options)
+        const res =  await fetch(popularUrl,options)
         const response = (await res.json()).results
         //  console.log(response)
-        setOnTheAir(response)
-        //  console.log(onTheAir)
+        setPopular(response)
+          console.log(popular)
         
     }
     catch(error) {
@@ -63,7 +63,7 @@ useEffect(() => {
     
 },[])
 
-  return   { onTheAir,airingToday,topRated}
+  return   { popular,airingToday,topRated}
   
 }
 
