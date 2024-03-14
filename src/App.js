@@ -14,6 +14,8 @@ function App() {
           <Route path="/Seriesc" element={<SeriesPage />}></Route>
           <Route path="/Movies" element={<MoviesPage/>}></Route>
           <Route path="/Topc" element={<TopImbdPage/>}></Route>
+          <Route path="/Topc" element={<TopImbdPage/>}></Route>
+          <Route path="/Topc" element={<TopImbdPage/>}></Route>
         </Routes>
       </BrowserRouter>
     </div>
