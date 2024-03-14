@@ -1,5 +1,7 @@
+// MovieList.js
 import React, { useState, useEffect } from 'react';
 import Moviec from '../../components/moviesc';
+import '../../components/moviesc/index.css'; // Adjust the path to styles.css
 import { Container, Grid } from '@mui/material';
 
 const MovieList = () => {
@@ -27,9 +29,9 @@ const MovieList = () => {
   return (
     <Container maxWidth="lg" className="MovieList">
       <h2>Popular Movies</h2>
-      <Grid container spacing={3}>
-        {movies.map((movie) => (
-          <Grid item key={movie.id} xs={12} sm={6} md={4} lg={3}>
+      <Grid container spacing={3} alignItems="stretch">
+        {movies.map(movie => (
+          <Grid item xs={12} sm={6} md={4} lg={3} key={movie.id}>
             <Moviec
               title={movie.title}
               overview={movie.overview}
