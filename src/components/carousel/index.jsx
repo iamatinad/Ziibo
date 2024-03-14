@@ -3,7 +3,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-const MovieCa = ({ movies }) => {
+const Carousel= ({ movies }) => {
   const settings = {
     dots: false,
     infinite: true,
@@ -25,4 +25,4 @@ const MovieCa = ({ movies }) => {
   );
 };
 
-export default MovieCa;
+export default Carousel;

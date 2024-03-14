@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 import Browsecomponents from "../browse";
 import Searchbar from "../searchbar";
 import Signup from "../signup";
-import "./index.css"; 
-// import logoImage from "../../assets/images/logo.png";
+import "./index.css";
 
 function Navbar() {
   return (
@@ -12,7 +11,6 @@ function Navbar() {
       <nav>
         <ul>
           <li>
-            {/* <img src={logoImage} alt="Logo" className={styles.logo} /> */}
             <Link to="/">Home</Link>
             <Browsecomponents />
             <Searchbar />

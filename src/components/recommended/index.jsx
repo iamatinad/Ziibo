@@ -1,16 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import MovieCa from './MovieCa'; // Assuming MovieCa is the component for displaying individual movies
+import Carousel from '../carousel';
+
 
 const RecommendedMovies = () => {
-  // Sample list of recommended movies with titles and image URLs
-  const recommendedMovies = [
-    { title: 'Movie 1', imageUrl: 'https://www.example.com/image1.jpg' },
-    { title: 'Movie 2', imageUrl: 'https://www.example.com/image2.jpg' },
-    { title: 'Movie 3', imageUrl: 'https://www.example.com/image3.jpg' },
-    // Add more recommended movies as needed
-  ];
+  const [recommendedMovies, setRecommendedMovies] = useState([]);
+
+  useEffect(() => {
+    // Fetching recommended movies 
+    const fetchRecommendedMovies = async () => {
+      try {
+        const response = await fetch(`https://api.example.com/movies?key=4b289aba8d2a6c4ae31f299ca6a21723`);
+        if (response.ok) {
+          const data = await response.json();
+          setRecommendedMovies(data.results); 
+        } else {
+          console.error('Failed to fetch recommended movies');
+        }
+      } catch (error) {
+        console.error('Error fetching recommended movies:', error);
+      }
+    };
+
+    fetchRecommendedMovies();
+  }, []); 
 
   return (
     <div>
@@ -21,7 +35,7 @@ const RecommendedMovies = () => {
         </div>
         <div className="movies-carousel">
           {recommendedMovies.map((movie, index) => (
-            <MovieCa key={index} title={movie.title} imageUrl={movie.imageUrl} />
+            <Carousel key={index} title={movie.title} imageUrl={movie.imageUrl} />
           ))}
         </div>
         <div className="navigation-arrows">
@@ -33,3 +47,6 @@ const RecommendedMovies = () => {
 };
 
 export default RecommendedMovies;
+
+
+

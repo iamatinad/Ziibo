@@ -15,6 +15,9 @@ function Browsecomponents() {
           </Button>
           <Menu {...bindMenu(popupState)}>
             <MenuItem onClick={popupState.close}>
+              <Link to="/Genres">Genres</Link>
+            </MenuItem>
+            <MenuItem onClick={popupState.close}>
               <Link to="/Movies">Movies</Link>
             </MenuItem>
             <MenuItem onClick={popupState.close}>
