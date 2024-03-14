@@ -9,7 +9,7 @@ const Moviec = ({ title, overview, releaseDate, posterPath }) => {
       <CardMedia
         component="img"
         alt={title}
-        height="300"
+        height="200px"
         image={`https://image.tmdb.org/t/p/w500/${posterPath}`}
       />
       <CardContent>
@@ -19,13 +19,13 @@ const Moviec = ({ title, overview, releaseDate, posterPath }) => {
         <Typography variant="subtitle2" color="textSecondary" gutterBottom>
           Released: {releaseDate}
         </Typography>
-        <Typography variant="body2" paragraph>
-          {overview}
+        <Typography variant="body2" paragraph >
+          {overview.substring(0, 200)}...
         </Typography>
         <div className="user-rating">
           <Rating
             name="user-rating"
-            value={4.5} // Set the actual user rating here
+            value={4.5} 
             precision={0.5}
             readOnly
           />

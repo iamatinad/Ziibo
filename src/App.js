@@ -11,9 +11,11 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />}></Route>
-          <Route path="/Seriesc" element={<SeriesPage />}></Route>
-          <Route path="/Movies" element={<MoviesPage />}></Route>
-          <Route path="/Topc" element={<TopImbdPage />}></Route>
+          <Route path="/seriesc" element={<SeriesPage />}></Route>
+          <Route path="/movies" element={<MoviesPage />}></Route>
+          <Route path="/topc" element={<TopImbdPage />}></Route>
+          <Route path="/checkoutc" element={<Checkout/>}></Route>
+          
         </Routes>
       </BrowserRouter>
     </div>

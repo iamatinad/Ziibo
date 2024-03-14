@@ -25,9 +25,9 @@ const MovieList = () => {
   }, []);
 
   return (
-    <Container maxWidth="lg" className="MovieList">
+    <Container maxWidth="lg" className="MovieList" >
       <h2>Popular Movies</h2>
-      <Grid container spacing={3}>
+      <Grid container spacing={8}>
         {movies.map((movie) => (
           <Grid item key={movie.id} xs={12} sm={6} md={4} lg={3}>
             <Moviec

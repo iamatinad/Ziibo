@@ -1,8 +1,11 @@
 import React from 'react'
+import Checkoutc from '../checkoutc'
 
 function Hero() {
   return (
-    <div>Hero goes here</div>
+    <div>
+      <Checkoutc/>
+    </div>
   )
 }
 
