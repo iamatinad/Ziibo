@@ -1,9 +1,15 @@
 import React from 'react'
 import Faqs from '../faqs'
+import Checkout from '../checkout'
+ 
 
 function Home() {
   return (
-    <Faqs/>
+    <div> 
+      <Faqs/>
+    <Checkout />
+    </div>
+   
     
   )
 }

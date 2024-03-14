@@ -70,7 +70,7 @@ function Faqs() {
           aria-controls="panel2-content"
           id="panel2-header"
         >
-          Can  share Ziibo with my family?
+          Can  share I Ziibo with my family?
         </AccordionSummary>
         <AccordionDetails>
         Yes, you can share Ziibo with your family. 
