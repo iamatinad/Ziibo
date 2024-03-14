@@ -1,8 +1,14 @@
 .accordian{
     font-size: large;
+
+    background-color: rgb(249, 252, 249);
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 5%;   
     background-color: rgb(251, 253, 251);
     width: 70%;
     margin: 0 auto;
     padding-top: 5%;   
+
 }
 
