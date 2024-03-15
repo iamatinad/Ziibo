@@ -1,8 +1,11 @@
 import React from 'react'
+import TopC from '../../components/topc'
 
 function TopImbdPage() {
   return (
-    <div>TopImbdPage</div>
+    <div>
+      <TopC/>
+    </div>
   )
 }
 

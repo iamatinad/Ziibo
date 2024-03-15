@@ -1,11 +1,16 @@
-import React from 'react'
-import Faqs from '../faqs'
+import React from "react";
+import Hero from "../../components/hero";
+import Navbar from "../../components/navbar";
+import Footer from "../../components/footer/Footer";
 
 function Home() {
   return (
-    <Faqs/>
-    
-  )
+    <>
+      <Navbar />
+      <Hero />
+      <Footer />
+    </>
+  );
 }
 
-export default Home
+export default Home;

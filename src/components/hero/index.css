@@ -35,11 +35,14 @@
   .dive{
     font-weight: bold;
     font-size: 20px;
+    color: green;
   }
 
   .underline{
    text-decoration: underline;
    font-weight: bold;
+   /* color: aliceblue; */
+   
   }
 
   

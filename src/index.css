@@ -11,3 +11,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.browse-menu a{
+text-decoration: none;
+color: black;
+}
+
+.browse-menu a:hover {
+  font-weight: bold;
+}

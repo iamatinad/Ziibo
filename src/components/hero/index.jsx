@@ -2,6 +2,7 @@ import React from "react";
 import Shogun from "../../assets/images/Shogun-2.jpg";
 import Typewriter from "typewriter-effect";
 import "./index.css";
+import { Link } from "react-router-dom";
 
 function Hero() {
   return (
@@ -29,7 +30,8 @@ function Hero() {
             Dive into a world of cinematic wonders with our vast collection of
             movies, from Hollywood blockbuster to indie gems.
           </p>
-          <p className="underline">Starts at US$10.99 Cancel anytime.</p>
+          <Link to={'/Checkout'} style={{color: 'white'}}>Starts at US$10.99 Cancel anytime</Link>
+
         </div>
       </div>
       </div>
