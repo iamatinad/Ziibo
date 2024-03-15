@@ -1,86 +1,27 @@
-import useQueryGenres from "../../hooks/useQueryGenres"
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import { Button, CardActionArea, CardActions } from '@mui/material';
+import React,{useState,UseEffect, useEffect} from 'react';
+import {Chip} from '@mui/material';
+import axios from 'axios';
 
-function Genres() {
 
-  const { movieList,tvList} = useQueryGenres
+const Genres=({genres,setGenres})=> {
+  const fetchGenres = async()=>{ 
+   const{data} =await axios.get(
+    `https://api.themoviedb.org/3/genre/movie/list?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`);
 
+  setGenres(data?.genres);
+};
+
+useEffect(()=> {
+  fetchGenres()
+},[])
   return (
-    <div>
-      <h2>Genres</h2>
-      <div>
-      <h3>movieList</h3>
-
-        {
-          movieList.map((genres) => (
-            <Card sx={{ maxWidth: 250 }}>
-              <CardActionArea>
-                <CardMedia
-                  component="img"
-                  height="100"
-                  image={`https://image.tmdb.org/t/p/w500${genres.backdrop_path}`}
-                  alt="green iguana"
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    {genres.name}
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-              <CardActions>
-                <Button size="small" color="primary">
-                  play
-                </Button>
-              </CardActions>
-            </Card>
-
-          ))
-        }
-      </div>
-      <div>
-      <h3>TV List</h3>
-      {
-        tvList.map((genres) => (
-          <Card sx={{ maxWidth: 250 }}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="100"
-                image={`https://image.tmdb.org/t/p/w500${genres.backdrop_path}`}
-                alt="green iguana"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  {genres.name}
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions>
-              <Button size="small" color="primary">
-                play
-              </Button>
-            </CardActions>
-          </Card>
-
-        ))
-      }
-      </div>
-      <div>
-      
-      
-      </div>
-     
-
+    <div style={{padding:'10px 0'}}>
+        <Chip 
+        style={{fontSize:'1.2em',margin:'3px'}} 
+        label="Popularmovies" 
+         color='primary' />
     </div>
-  )
-}
+  );
+};
 
 export default Genres
